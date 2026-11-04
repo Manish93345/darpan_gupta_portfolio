@@ -1,0 +1,157 @@
+% =====================================================================
+%  DARPAN GUPTA — TEACHER RESUME (LaTeX)
+%  Compile with:  pdflatex resume.tex   (run twice for best link rendering)
+%  NOTE: Replace every "DRIVE_LINK_HERE" and "your.email@example.com"
+%        with the real values before sending.
+% =====================================================================
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=0.35in,bottom=0.3in,left=0.45in,right=0.45in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% ---------- Colors ----------
+\definecolor{primary}{HTML}{1F3A5F}   % deep navy
+\definecolor{accent}{HTML}{C0392B}    % muted red
+\definecolor{lightgray}{HTML}{555555}
+
+% ---------- Section styling ----------
+\titleformat{\section}
+  {\normalsize\bfseries\color{primary}}
+  {}{0em}{}[\vspace{-0.7em}\rule{\textwidth}{0.7pt}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------- Clickable links ----------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=primary,
+  pdfauthor={Darpan Gupta},
+  pdftitle={Darpan Gupta - Teacher Resume},
+  pdfsubject={Application for Teaching Position}
+}
+
+% ---------- Custom bullet ----------
+\newcommand{\cvevent}[2]{%
+  \textbf{\color{primary}#1} \hfill \textit{\color{lightgray}#2}\par}
+
+% Compact list defaults (no content removed, layout-only tightening)
+\setlist[itemize]{leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+  {\LARGE\bfseries\color{primary} DARPAN GUPTA}\\[2pt]
+  {\color{accent}\rule{0.35\textwidth}{1pt}}\\[3pt]
+  {\normalsize\itshape Primary \& Mathematics Teacher $\vert$ Home Tutor}\\[3pt]
+  Ram Asrey Purwa, Khargapur, Lucknow, Uttar Pradesh \textbf{1236010}\\[1pt]
+  \href{tel:+919005274057}{+91 90052 74057} \quad$\vert$\quad
+  \href{mailto:your.email@example.com}{your.email@example.com} \quad$\vert$\quad
+  \href{https://YOUR-PORTFOLIO-LINK-HERE}{My Online Portfolio}
+\end{center}
+\vspace{-10pt}
+
+% ================= OBJECTIVE =================
+\section{Career Objective}
+Dedicated and patient educator with over \textbf{4 years} of hands-on teaching and
+home-tuition experience, seeking a position as a teacher in a professionally managed
+organization where I can apply my knowledge of student-centred pedagogy, strengthen
+foundational \textbf{Mathematics} and primary-level concepts, and contribute to the
+academic growth of every learner while growing alongside the institution.
+
+% ================= EDUCATION =================
+\section{Educational Qualifications}
+\begin{tabularx}{\textwidth}{@{}l X l@{}}
+\textbf{B.A. (Graduation)} & University of Burdwan, West Bengal & 2010 \\
+\textbf{Intermediate} & West Bengal Board of Secondary Education (Higher Secondary) & 2007 \\
+\textbf{High School} & West Bengal Board of Secondary Education (Madhyamik) & 2004 \\
+\end{tabularx}
+
+% ================= WORK EXPERIENCE =================
+\section{Teaching Experience}
+
+\cvevent{Home Tutor \textemdash\ All Subjects (Classes 1--8), Special Focus on Mathematics}{Lucknow, Uttar Pradesh \textemdash\ 2 Years}
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+  \item Provided one-to-one home tuition to primary and junior-high students, building
+        strong foundations in Mathematics, Hindi, English and Science.
+  \item Designed personalised lesson plans after assessing each student's learning level,
+        and used activity-based methods (games, real-life examples, visual aids) to make
+        abstract maths concepts intuitive.
+  \item Conducted regular chapter tests and weekly revision; tracked progress and shared
+        detailed feedback with parents, resulting in visible improvement in school scores
+        and classroom confidence.
+  \item Prepared students for school examinations with structured practice worksheets,
+        previous-year question practice and doubt-clearing sessions.
+\end{itemize}
+
+\cvevent{Home Tutor \textemdash\ Mathematics \& Primary Subjects}{Shanti Vihar Colony, Robertsganj, Sonbhadra, Uttar Pradesh \textemdash\ 1 Year}
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+  \item Taught Mathematics and core primary subjects to a group of students from the local
+        colony, managing mixed-age and mixed-ability batches effectively.
+  \item Adapted teaching style to each learner --- slow-learners received step-by-step
+        scaffolding while advanced students were given enrichment problems.
+  \item Maintained a disciplined, encouraging study environment with daily homework
+        checks and monthly parent interaction on student progress.
+  \item Helped students develop regular study habits, neat written work and exam
+        presentation skills.
+\end{itemize}
+
+\cvevent{Early Teaching Engagement}{West Bengal \textemdash\ 1 Year}
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+  \item Began my teaching journey supporting school-level learners after graduation,
+        gaining experience in lesson preparation, classroom management and student
+        evaluation.
+\end{itemize}
+
+% ================= SKILLS =================
+\section{Key Skills \& Strengths}
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+  \item \textbf{Subject Teaching:} Mathematics (primary \& junior level), Hindi, English, Science
+  \item \textbf{Pedagogy:} Student-centred \& activity-based learning, differentiated
+        instruction, remedial teaching, assessment \& feedback
+  \item \textbf{Classroom Management:} Mixed-ability grouping, positive discipline,
+        parent--teacher communication
+  \item \textbf{Other:} Lesson planning, worksheet \& test-paper preparation,
+        progress tracking, computer-literate (basic)
+\end{itemize}
+
+% ================= CERTIFICATION =================
+\section{Certification}
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+  \item \textbf{\textcolor{primary}{Enhancing Pedagogical Practices in Math Teaching and Learning}}\\
+        Certificate verifying advanced training in modern mathematics pedagogy ---
+        \href{DRIVE_LINK_HERE}{\textbf{Click here to view the certificate (Google Drive)}}.
+\end{itemize}
+
+% ================= PERSONAL DETAILS =================
+\section{Personal Details}
+\begin{tabularx}{\textwidth}{@{}p{2.6cm} X p{2.6cm} X@{}}
+\textbf{Husband's Name}  & Mr. Sanjit Gupta & \textbf{Nationality}     & Indian \\
+\textbf{Date of Birth}   & 01 February 1989 & \textbf{Gender}          & Female \\
+\textbf{Marital Status}  & Married & \textbf{Languages Known} & Hindi, English \\
+\textbf{Hobbies}         & Reading Books \& Listening to Music & & \\
+\end{tabularx}
+
+% ================= DECLARATION =================
+\section{Declaration}
+\vspace{-6pt}
+I hereby sincerely declare that the facts provided in this resume are true and correct
+to the best of my knowledge and belief.
+
+\vspace{-2pt}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Place:} Lucknow \quad \textbf{Date:} \underline{\hspace{2.5cm}} &
+\raisebox{-0.9\height}{\parbox{4.5cm}{\centering\rule{3.2cm}{0.4pt}\\[2pt]\textbf{Darpan Gupta}}}\\
+\end{tabularx}
+
+\end{document}

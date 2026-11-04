@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darpan Gupta — Teacher & Home Tutor | Portfolio</title>
+<meta name="description" content="Portfolio of Darpan Gupta, primary & mathematics teacher and home tutor in Robertsganj, Sonbhadra, UP.">
+<style>
+:root{
+  --primary:#1F3A5F; --accent:#C0392B; --gold:#E3B23C;
+  --bg:#f7f5f0; --card:#ffffff; --text:#222831; --muted:#5c6672;
+  --border:#e3ded4; --shadow:0 8px 24px rgba(31,58,95,.10);
+}
+html.dark{
+  --bg:#14181f; --card:#1e2530; --text:#e8e6e1; --muted:#9aa4b1;
+  --border:#2c3542; --shadow:0 8px 24px rgba(0,0,0,.45);
+  --primary:#8fb3e8; --accent:#e57368;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .35s,color .35s}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+section{padding:72px 20px;max-width:1050px;margin:0 auto}
+h2.section-title{font-size:1.9rem;color:var(--primary);text-align:center;margin-bottom:6px}
+.section-sub{text-align:center;color:var(--muted);margin-bottom:38px}
+.rule{width:64px;height:3px;background:var(--gold);margin:10px auto 0;border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.logo{font-weight:700;color:var(--primary);font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none}
+nav a{color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600}
+nav a:hover{color:var(--accent)}
+#darkToggle{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 12px;cursor:pointer;font-size:1rem;color:var(--text)}
+#hamburger{display:none;font-size:1.4rem;background:none;border:none;color:var(--text);cursor:pointer}
+@media(max-width:760px){
+  #hamburger{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--card);flex-direction:column;padding:16px 24px;border-bottom:1px solid var(--border)}
+  nav ul.open{display:flex}
+}
+
+/* HERO */
+header.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;
+ background:linear-gradient(160deg,rgba(31,58,95,.96),rgba(31,58,95,.86));}
+.hero-inner{color:#fff;max-width:700px}
+.profile-ring{width:160px;height:160px;border-radius:50%;margin:0 auto 20px;padding:5px;background:linear-gradient(135deg,var(--gold),#fff)}
+.profile-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.hero h1{font-size:2.6rem;letter-spacing:.5px}
+.hero .tagline{font-size:1.15rem;margin:10px 0 4px;color:#ffe9b3}
+.hero .sub{opacity:.9;margin-bottom:26px}
+.btn{display:inline-block;padding:12px 28px;border-radius:30px;text-decoration:none;font-weight:700;margin:6px;transition:.25s}
+.btn-gold{background:var(--gold);color:#1F3A5F}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.btn-ghost{border:2px solid #fff;color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--primary)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+.about-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+.about-card h3{color:var(--primary);margin-bottom:10px}
+.info-list{list-style:none;font-size:.95rem}
+.info-list li{padding:6px 0;border-bottom:1px dashed var(--border);display:flex;justify-content:space-between;gap:12px}
+.info-list li span:first-child{color:var(--muted);font-weight:600}
+.counters{display:flex;justify-content:space-around;margin-top:34px;flex-wrap:wrap;gap:18px}
+.counter{text-align:center}
+.counter .num{font-size:2.4rem;font-weight:800;color:var(--accent)}
+.counter .lbl{color:var(--muted);font-size:.9rem}
+
+/* EDUCATION TABLE */
+.edu-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+.edu-table th{background:var(--primary);color:#fff;padding:12px 16px;text-align:left;font-size:.9rem}
+.edu-table td{padding:11px 16px;border-top:1px solid var(--border);font-size:.95rem}
+.edu-table td:last-child{text-align:right;color:var(--muted);font-weight:700}
+
+/* TIMELINE */
+.timeline{position:relative;margin:0 auto;max-width:760px}
+.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--border);transform:translateX(-50%)}
+.tl-item{position:relative;width:50%;padding:10px 40px 26px;opacity:0;transform:translateY(30px);transition:all .7s ease}
+.tl-item.visible{opacity:1;transform:translateY(0)}
+.tl-item:nth-child(odd){left:0;text-align:right}
+.tl-item:nth-child(even){left:50%;text-align:left}
+.tl-item::after{content:'';position:absolute;top:20px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:3px solid var(--card);box-shadow:0 0 0 3px var(--gold)}
+.tl-item:nth-child(odd)::after{right:-8px}
+.tl-item:nth-child(even)::after{left:-8px}
+.tl-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+.tl-card h3{color:var(--primary);font-size:1.05rem}
+.tl-card .when{font-size:.85rem;color:var(--accent);font-weight:700;margin-bottom:6px}
+.tl-card ul{text-align:left;padding-left:1.1em;font-size:.92rem;color:var(--muted)}
+.tl-card ul li{margin-bottom:4px}
+@media(max-width:760px){
+  .timeline::before{left:10px}
+  .tl-item{width:100%;left:0!important;text-align:left!important;padding-left:44px;padding-right:10px}
+  .tl-item::after{left:2px!important;right:auto!important}
+}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 40px}
+@media(max-width:760px){.skills-grid{grid-template-columns:1fr}}
+.skill{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;box-shadow:var(--shadow)}
+.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem}
+.bar{height:9px;background:var(--border);border-radius:6px;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--gold));border-radius:6px;transition:width 1.4s ease}
+
+/* CERTIFICATE */
+.cert-card{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--gold);border-radius:14px;padding:28px 30px;box-shadow:var(--shadow);max-width:720px;margin:0 auto;display:flex;gap:20px;align-items:flex-start}
+.cert-card .badge{font-size:2.2rem;line-height:1}
+.cert-card h3{color:var(--primary);font-size:1.15rem;margin-bottom:6px}
+.cert-card p{font-size:.95rem;color:var(--muted)}
+.cert-card .links{margin-top:12px}
+.cert-card .btn-small{display:inline-block;padding:9px 22px;border-radius:24px;background:var(--primary);color:#fff;font-weight:700;font-size:.88rem;text-decoration:none;transition:.2s}
+.cert-card .btn-small:hover{background:var(--accent)}
+
+footer{text-align:center;padding:28px 20px;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
+footer a{color:var(--primary);text-decoration:none;font-weight:600}
+footer a:hover{color:var(--accent)}
+footer .f-line{margin-top:6px;font-size:.85rem}
+#toTop{position:fixed;bottom:26px;right:26px;background:var(--primary);color:#fff;border:none;border-radius:50%;width:46px;height:46px;font-size:1.2rem;cursor:pointer;display:none;box-shadow:var(--shadow)}
+#toTop.show{display:block}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="logo">Darpan Gupta</div>
+  <button id="hamburger" aria-label="menu">☰</button>
+  <ul id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certificates">Certificate</a></li>
+  </ul>
+  <button id="darkToggle" title="Toggle dark mode">🌙</button>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="profile-ring"><img src="static/profile.jpg" alt="Darpan Gupta"></div>
+    <h1>Darpan Gupta</h1>
+    <p class="tagline">Primary Teacher &nbsp;|&nbsp; Home Tutor</p>
+    <p class="sub">Shanti Vihar Colony, Robertsganj, Sonbhadra, Uttar Pradesh</p>
+    <a class="btn btn-gold" href="https://drive.google.com/file/d/1ZkaEEaYmpAStiwfjpf80UZymrSXoVNpD/view" target="_blank" rel="noopener">📄 Download Resume</a>
+    <a class="btn btn-ghost" href="tel:+919005274057">📞 +91 90052 74057</a>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2 class="section-title">About Me</h2><div class="rule"></div>
+  <p class="section-sub">A patient, caring educator building strong basics for young learners</p>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Hello! I'm Darpan 👋</h3>
+      <p>I am a <strong>patient and caring teacher</strong> with hands-on experience in teaching young children.
+      I am looking for a teaching position in a good school where I can use my skills to teach
+      <strong>Mathematics</strong> and primary subjects. My goal is to help every child learn easily,
+      build strong basics, and grow with the school.</p>
+      <p style="margin-top:10px">I have taught children across <strong>Lucknow</strong> and <strong>Robertsganj, Sonbhadra</strong>,
+      and I have completed a certification in <em>Enhancing Pedagogical Practices in Math Teaching and Learning</em>,
+      which guides how I plan lessons, give attention to weak students, and keep parents informed about progress.</p>
+    </div>
+    <div class="about-card">
+      <h3>Personal Details</h3>
+      <ul class="info-list">
+        <li><span>Husband's Name</span><span>Mr. Sanjit Gupta</span></li>
+        <li><span>Date of Birth</span><span>01 February 1989</span></li>
+        <li><span>Nationality</span><span>Indian</span></li>
+        <li><span>Gender</span><span>Female</span></li>
+        <li><span>Marital Status</span><span>Married</span></li>
+        <li><span>Languages Known</span><span>Hindi, English</span></li>
+        <li><span>Hobbies</span><span>Reading Books &amp; Music</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="counters">
+    <div class="counter"><div class="num" data-target="4">0</div><div class="lbl">Years Teaching</div></div>
+    <div class="counter"><div class="num" data-target="4">0</div><div class="lbl">Subjects Taught</div></div>
+    <div class="counter"><div class="num" data-target="3">0</div><div class="lbl">Locations Served</div></div>
+    <div class="counter"><div class="num" data-target="1">0</div><div class="lbl">Certification</div></div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <h2 class="section-title">Educational Qualifications</h2><div class="rule"></div>
+  <p class="section-sub">My academic background</p>
+  <table class="edu-table">
+    <tr><th>Qualification</th><th>Institution / Board</th><th>Year</th></tr>
+    <tr><td><strong>B.A. (Graduation)</strong></td><td>University of Burdwan, West Bengal</td><td>2010</td></tr>
+    <tr><td><strong>Intermediate</strong></td><td>West Bengal Board of Secondary Education (Higher Secondary)</td><td>2007</td></tr>
+    <tr><td><strong>High School</strong></td><td>West Bengal Board of Secondary Education (Madhyamik)</td><td>2004</td></tr>
+  </table>
+</section>
+
+<!-- ================= EXPERIENCE (TIMELINE) ================= -->
+<section id="experience">
+  <h2 class="section-title">Teaching Experience</h2><div class="rule"></div>
+  <p class="section-sub">My journey as an educator, one classroom at a time</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-card">
+        <h3>Home Tutor — Mathematics &amp; Primary Subjects</h3>
+        <div class="when">Robertsganj, Sonbhadra, U.P. — Jan 2026 – Present</div>
+        <ul>
+          <li>Teaching Math and other main subjects to children from the local colony.</li>
+          <li>Paying special attention to weak students by teaching them step-by-step in very simple ways.</li>
+          <li>Keeping a good study environment, checking daily homework, and talking to parents every month about their child's progress.</li>
+          <li>Helping students build good study habits and neat handwriting.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-card">
+        <h3>Home Tutor — All Subjects (Classes 1–8)</h3>
+        <div class="when">Lucknow, Uttar Pradesh — Feb 2024 – Dec 2025</div>
+        <ul>
+          <li>Provided home tuition to young students to build strong basics in Math, Hindi, English, and Science.</li>
+          <li>Made learning fun by using games, real-life examples, and simple activities so children easily understand math.</li>
+          <li>Took regular weekly tests to check learning and shared feedback with parents.</li>
+          <li>Helped students prepare well for their school exams by solving practice worksheets.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-card">
+        <h3>Early Teaching Engagement</h3>
+        <div class="when">West Bengal — 1 Year</div>
+        <ul>
+          <li>Started my teaching journey by helping school kids after graduation, learning how to handle children and teach simple lessons.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2 class="section-title">Key Skills &amp; Strengths</h2><div class="rule"></div>
+  <p class="section-sub">What I bring to the classroom</p>
+  <div class="skills-grid">
+    <div class="skill"><div class="row"><span>Subject Teaching: Math, Hindi, English, Science</span><span>95%</span></div><div class="bar"><i data-w="95%"></i></div></div>
+    <div class="skill"><div class="row"><span>Teaching Style: Fun learning with games &amp; easy examples</span><span>92%</span></div><div class="bar"><i data-w="92%"></i></div></div>
+    <div class="skill"><div class="row"><span>Handling Class: Well-behaved, attentive to every child</span><span>90%</span></div><div class="bar"><i data-w="90%"></i></div></div>
+    <div class="skill"><div class="row"><span>Other Work: Homework checks, test papers, basic computer</span><span>85%</span></div><div class="bar"><i data-w="85%"></i></div></div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATION ================= -->
+<section id="certificates">
+  <h2 class="section-title">Certification</h2><div class="rule"></div>
+  <p class="section-sub">My professional training</p>
+  <div class="cert-card">
+    <div class="badge">🎓</div>
+    <div>
+      <h3>Enhancing Pedagogical Practices in Math Teaching and Learning</h3>
+      <p>Completed training on how to teach math easily to students.</p>
+      <div class="links">
+        <a class="btn-small" href="https://drive.google.com/file/d/1_ITmImW4xrEsrrgtPEYam5xKGXBBX9dJ/view" target="_blank" rel="noopener">View Certificate ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong style="color:var(--primary)">Darpan Gupta</strong> — Primary Teacher &amp; Home Tutor<br>
+  <div class="f-line">📞 <a href="tel:+919005274057">+91 90052 74057</a> &nbsp;|&nbsp; ✉️ <a href="mailto:100rab777888@gmail.com">100rab777888@gmail.com</a></div>
+  <div class="f-line">📍 Shanti Vihar Colony, Robertsganj, Sonbhadra, Uttar Pradesh</div>
+  <div class="f-line">© <span id="year"></span> Darpan Gupta · Made with ❤️</div>
+</footer>
+<button id="toTop" title="Back to top">↑</button>
+
+<script>
+// ---------- Dark mode ----------
+const toggle=document.getElementById('darkToggle');
+if(localStorage.getItem('dg-theme')==='dark'){document.documentElement.classList.add('dark');toggle.textContent='☀️';}
+toggle.addEventListener('click',()=>{
+  document.documentElement.classList.toggle('dark');
+  const dark=document.documentElement.classList.contains('dark');
+  toggle.textContent=dark?'☀️':'🌙';
+  localStorage.setItem('dg-theme',dark?'dark':'light');
+});
+
+// ---------- Mobile menu ----------
+const navUl=document.getElementById('navLinks');
+document.getElementById('hamburger').addEventListener('click',()=>navUl.classList.toggle('open'));
+navUl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navUl.classList.remove('open')));
+
+// ---------- Animated counters ----------
+function animateCounter(el){
+  const target=+el.dataset.target, suffix=el.dataset.suffix||''; let cur=0;
+  const step=Math.max(1,Math.ceil(target/60));
+  const t=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(t);}el.textContent=cur+suffix;},28);
+}
+const cObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);cObs.unobserve(e.target);}}),{threshold:.6});
+document.querySelectorAll('.counter .num').forEach(n=>cObs.observe(n));
+
+// ---------- Timeline reveal ----------
+const tObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');tObs.unobserve(e.target);}}),{threshold:.2});
+document.querySelectorAll('.tl-item').forEach(i=>tObs.observe(i));
+
+// ---------- Skill bars ----------
+const sObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const b=e.target;b.querySelector('i').style.width=b.querySelector('i').dataset.w;sObs.unobserve(b);}}),{threshold:.4});
+document.querySelectorAll('.skill').forEach(s=>sObs.observe(s));
+
+// ---------- Back to top ----------
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>500));
+toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
